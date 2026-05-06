@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const API_URL = "http://89.167.58.31:8000/signals";
+const API_URL = "https://apexsignals.mooo.com/signals";
 const PHASE_COLOR = { BULLRUN: "#22c55e", BEARMARKET: "#ef4444", SIDEWAYS: "#f59e0b", RECOVERY: "#3b82f6", KAPITULATION: "#f97316", NEUTRAL: "#6b7280" };
 const fmt = (pair, price) => { if (!price) return "—"; const p = (pair||"").replace("USDT",""); if (p==="XRP") return Number(price).toFixed(4); if (p==="ETH") return Number(price).toFixed(1); return Number(price).toFixed(0); };
 const fmtTime = (iso) => { try { return new Date(iso).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}); } catch { return "—"; } };
